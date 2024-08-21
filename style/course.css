@@ -1,0 +1,16 @@
+.trails{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.trail{
+    width: 70%;
+    height: 15vh;
+    border-radius: 50px;
+    background-color: aqua;
+    cursor: not-allowed;
+}
+
+.web{
+    cursor: pointer;
+}
