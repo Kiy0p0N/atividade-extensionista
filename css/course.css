@@ -1,0 +1,108 @@
+.trails{
+    flex: 7;
+    display: flex;
+    height: 100%;
+}
+
+.course{
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.information{
+    flex: 3;
+}
+
+.information p{
+    display: none;
+}
+
+.trail{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center left;
+    
+    height: 20vh;
+    width: 90%;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    transition: 0.5s;
+}
+
+.trail p{
+    width: 40%;
+}
+
+.trail:hover{
+    transform: scale(1.01);
+    opacity: 0.7;
+}
+
+.blocked{
+    cursor: no-drop;
+}
+
+#web{
+    background-image: url("../image/dev-web.jpg");
+}
+
+#python{
+    background-image: url("../image/python.jpg");
+}
+
+#ia{
+    background-image: url("../image/ia.jpg");
+}
+
+
+
+/* Estilo para o fundo da sobreposição */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para o contêiner do alerta */
+.alert-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Estilo para a imagem */
+.alert-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botão de fechar */
+.alert-box button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
