@@ -1,7 +1,0 @@
-Atividade extensionista - projeto
-
-Objetivo - criar um protótipo de um site educacional, em que crianças da minha comunidade possam aprender um pouco sobre programação.
-
-1° - criar o site
-
-2° - gravar as aulas
