@@ -21,10 +21,7 @@ $(document).ready(()=>{
         $('#text-ia').fadeOut(0);
     })
 
-    function showCustomAlert(){
-        
-    }
-
+    
     $('.blocked').click(()=>{
         $('#customAlert').css('display', 'flex')
     })

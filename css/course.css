@@ -52,15 +52,15 @@
 }
 
 #web{
-    background-image: url("../image/dev-web.jpg");
+    background-image: url("../assets/image/dev-web.jpg");
 }
 
 #python{
-    background-image: url("../image/python.jpg");
+    background-image: url("../assets/image/python.jpg");
 }
 
 #ia{
-    background-image: url("../image/ia.jpg");
+    background-image: url("../assets/image/ia.jpg");
 }
 
 

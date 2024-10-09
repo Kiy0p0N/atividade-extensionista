@@ -1,38 +1,41 @@
-
 $(document).ready(function() {
-
-    // Mapeia os botões aos respectivos vídeos
+    // Mapeia os botões aos vídeos respectivamente
     const videos = {
-        video1: 'https://www.youtube.com/embed/eSW2LVbPThw?si=gEoOydFm7u1jpjll',
-        video2: 'https://www.youtube.com/embed/xkmwnagLdcc?si=Ytl2aW4XVZYdtd7v'
+        video1: 'assets/video/web developer/Desenvolvimento Web - video 1.mp4',
+        video2: 'assets/video/web developer/Desenvolvimento Web - video 2.mp4',
+        video3: 'assets/video/web developer/Desenvolvimento Web - video 3.mp4',
+        video4: 'assets/video/web developer/Desenvolvimento Web - video 4.mp4',
+        video5: 'assets/video/web developer/Desenvolvimento Web - video 5.mp4',
+        video6: 'assets/video/web developer/Desenvolvimento Web - video 6.mp4',
+        video7: 'assets/video/web developer/Desenvolvimento Web - video 7.mp4',
+        video8: 'assets/video/web developer/Desenvolvimento Web - video 8.mp4',
+        video9: 'assets/video/web developer/Desenvolvimento Web - video 9.mp4',
+        video10: 'assets/video/web developer/Desenvolvimento Web - video 10.mp4',
     };
-
-    const description = {
-        video1: 'Acode: https://www.youtube.com/embed/193o45FerK0?si=KJXjET2N73kIZAz3',
-        video2: 'Hello world.'
-    }
 
     // Evento de clique genérico
     $('.links-section button').click(function() {
-        const videoId = $(this).attr('id');  // Pega o ID do botão clicado
+        const videoId = $(this).attr('id'); // Pega o ID do botão clicado
+        const videoElement = $('video')[0]; // Seleciona o elemento de vídeo
 
-        $('iframe').attr('src', videos[videoId]);  // Atualiza o iframe com o vídeo correspondente
-        $('.description p').text(description[videoId])
+        // Atualiza o src do vídeo
+        $('video source').attr('src', videos[videoId]);
+        
+        // Carrega e reproduz o vídeo
+        videoElement.load(); // Carrega o novo vídeo
 
-        const textBtn = $('#' + videoId).text()  // Pega o texto do botão clicado
-        $('.video-section h1').text(textBtn)  // Atualiza o texto do h1 para o texto do botão 
+        // Atualiza o texto do h1 para o texto do botão
+        const textBtn = $('#' + videoId).text();
+        $('.video-section h1').text(textBtn);
     });
 
-
+    // Lógica para o botão 'Ver Mais' ou 'Ver Menos'
     $('.see-more').click(function(){
-        
-        $('.description').toggleClass('disable')  // Remove a classe caso exista ou adiciona caso ela não exista
-
-        if($('.description').hasClass('disable')){  // Verifica se tem a classe disable
-            $('.see-more').text('Ver Mais ▼')  // Se tiver o texto do botão será 'Ver Mais'
+        $('.description').toggleClass('disable'); // Adiciona ou remove a classe 'disable'
+        if($('.description').hasClass('disable')) {
+            $('.see-more').text('Ver Mais ▼');
         } else {
-            $('.see-more').text('Ver Menos ▲')  // Se não tiver o texto será 'Ver Menos'
+            $('.see-more').text('Ver Menos ▲');
         }
-    })
-
+    });
 });
